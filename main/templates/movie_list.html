@@ -7,7 +7,7 @@
 
     <ol>
         {% for movie in movie_list %}
-            <li>{{ movie.title }}</li>
+            <li><a href="/movie_detail/{{movie.pk}}">{{ movie.title }}</a></li>
         {% endfor %}
     </ol>
 

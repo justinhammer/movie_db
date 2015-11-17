@@ -62,3 +62,14 @@ def movie_list(request):
             'release': movie.dvd_release_date,
             })
     return JsonResponse(api_dict)
+
+
+def movie_detail(request, pk):
+
+    context = {}
+
+    movie = Movie.objects.get(pk=pk)
+
+    context['movie'] = movie
+
+    return render_to_response('movie_detail.html', context, context_instance=RequestContext(request))

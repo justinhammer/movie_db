@@ -30,4 +30,6 @@ urlpatterns = [
     url(r'^movie_list_mysql/$', 'main.views.movie_list_mysql'),
     url(r'^movie_list_cas/$', 'main.views.movie_list_cas'),
 
+    url(r'^movie_detail/(?P<pk>\d+)/$', 'main.views.movie_detail'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
