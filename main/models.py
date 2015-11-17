@@ -22,8 +22,9 @@ class Movie(models.Model):
 
 
 class MovieCas(Model):
-    id = columns.Integer(primary_key=True, required=False)
+    sql_id = columns.Integer(primary_key=True, required=False)
     title = columns.Text(required=False)
+    uu_id = columns.UUID(primary_key=True, default=uuid.uuid4)
 
 
 class Genre(models.Model):
